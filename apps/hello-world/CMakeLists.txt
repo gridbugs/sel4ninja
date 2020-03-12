@@ -2,9 +2,6 @@ cmake_minimum_required(VERSION 3.7.2)
 
 project(hello-world C)
 
-set(configure_string "")
-add_config_library(hello-world "${configure_string}")
-
 find_package(musllibc REQUIRED)
 find_package(util_libs REQUIRED)
 find_package(seL4_libs REQUIRED)

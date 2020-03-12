@@ -11,10 +11,6 @@ list(
         ${project_modules}
 )
 
-set(NANOPB_SRC_ROOT_FOLDER "${project_dir}/tools/nanopb" CACHE INTERNAL "")
-
-set(SEL4_CONFIG_DEFAULT_ADVANCED ON)
-
 include(application_settings)
 
 include(${CMAKE_CURRENT_LIST_DIR}/easy-settings.cmake)
