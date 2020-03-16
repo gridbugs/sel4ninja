@@ -66,11 +66,21 @@ int main(void) {
     ssize_t bytes_written;
 
     // Turn on eye LEDs
-    msg = "{\"DEVICE\":[{\"G\":\"0\",\"V\":0,\"D\":1007,\"DA\":\"00FFFF\"}]}";
+    msg = "{\"DEVICE\":[{\"G\":\"0\",\"V\":0,\"D\":1007,\"DA\":\"440044\"}]}";
     len = strlen(msg);
     printf("writing %s to uart (len=%u)\n", msg, len);
     bytes_written = ps_cdev_write(&chardev, msg, len, NULL, NULL);
     printf("wrote %d bytes (attempted %u)\n", bytes_written, len);
+
+    for (volatile int i = 0; i < 10000000; i++);
+
+    // Change status LED
+    msg = "{\"DEVICE\":[{\"G\":\"0\",\"V\":0,\"D\":999,\"DA\":\"008080\"}]}";
+    len = strlen(msg);
+    printf("writing %s to uart (len=%u)\n", msg, len);
+    bytes_written = ps_cdev_write(&chardev, msg, len, NULL, NULL);
+    printf("wrote %d bytes (attempted %u)\n", bytes_written, len);
+
 
     return 0;
 }
