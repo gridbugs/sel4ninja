@@ -14,4 +14,4 @@ sel4_import_kernel()
 ApplyData61ElfLoaderSettings(${KernelPlatform} ${KernelSel4Arch})
 elfloader_import_project()
 
-add_subdirectory(apps/hello-world)
+add_subdirectory(apps/hello-ninja)
