@@ -65,6 +65,7 @@ int main(void) {
     ssize_t len;
     ssize_t bytes_written;
 
+    // Turn on eye LEDs
     msg = "{\"DEVICE\":[{\"G\":\"0\",\"V\":0,\"D\":1007,\"DA\":\"00FFFF\"}]}";
     len = strlen(msg);
     printf("writing %s to uart (len=%u)\n", msg, len);
