@@ -6,7 +6,7 @@
 
 <default revision="master" remote="seL4" />
 
-<project name="sel4min-project" remote="stevebob" path="projects/sel4min">
+<project name="sel4ninja" remote="stevebob" path="projects/sel4ninja">
     <linkfile src="easy-settings.cmake" dest="easy-settings.cmake" />
 </project>
 
