@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote fetch="https://github.com/seL4" name="seL4" />
+    <remote fetch="https://github.com/sel4proj" name="sel4proj" />
+    <remote fetch="https://github.com/stevebob" name="stevebob" />
+
+<default revision="master" remote="seL4" />
+
+<project name="sel4min-project" remote="stevebob" path="projects/sel4min">
+    <linkfile src="easy-settings.cmake" dest="easy-settings.cmake" />
+</project>
+
+<project name="seL4.git" remote="stevebob" revision="bone" path="kernel"/>
+
+<project name="seL4_tools.git" remote="stevebob" revision="bone" path="tools/seL4">
+    <linkfile src="cmake-tool/init-build.sh" dest="init-build.sh"/>
+    <linkfile src="cmake-tool/griddle" dest="griddle"/>
+</project>
+
+<project name="sel4runtime.git" remote="sel4proj" path="projects/sel4runtime"/>
+<project name="musllibc.git" path="projects/musllibc" revision="sel4"/>
+<project name="seL4_libs.git" path="projects/seL4_libs"/>
+<project name="util_libs.git" path="projects/util_libs"/>
+<project name="sel4_projects_libs" path="projects/sel4_projects_libs" remote="sel4proj" />
+</manifest>
