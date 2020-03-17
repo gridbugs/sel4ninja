@@ -10,7 +10,7 @@
     <linkfile src="easy-settings.cmake" dest="easy-settings.cmake" />
 </project>
 
-<project name="seL4.git" remote="stevebob" revision="bone" path="kernel"/>
+<project name="seL4.git" remote="stevebob" revision="scm-hacks" path="kernel"/>
 
 <project name="seL4_tools.git" remote="stevebob" revision="bone" path="tools/seL4">
     <linkfile src="cmake-tool/init-build.sh" dest="init-build.sh"/>
